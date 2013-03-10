@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130310224714) do
+ActiveRecord::Schema.define(version: 20130310230258) do
 
   create_table "cities", force: true do |t|
     t.string   "name"
@@ -19,7 +19,12 @@ ActiveRecord::Schema.define(version: 20130310224714) do
     t.string   "country_code"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "lat"
+    t.float    "lng"
   end
+
+  add_index "cities", ["lat"], name: "index_cities_on_lat"
+  add_index "cities", ["lng"], name: "index_cities_on_lng"
 
   create_table "hotels", force: true do |t|
     t.string   "name"
