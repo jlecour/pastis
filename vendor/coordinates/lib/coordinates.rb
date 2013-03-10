@@ -1,5 +1,10 @@
 require "coordinates/version"
+require 'coordinates/geo_point'
 
 module Coordinates
-  # Your code goes here...
+
+  def coordinates
+    GeoPoint.new(lat, lng)
+  end
+
 end

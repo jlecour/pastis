@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'coordinates', path: 'vendor/coordinates'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.beta1'
 

@@ -1,3 +1,8 @@
+PATH
+  remote: vendor/coordinates
+  specs:
+    coordinates (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -118,6 +123,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0.beta1)
+  coordinates!
   jbuilder (~> 1.0.1)
   jquery-rails
   pry-rails
