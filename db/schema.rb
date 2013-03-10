@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130310223945) do
+ActiveRecord::Schema.define(version: 20130310224714) do
 
   create_table "cities", force: true do |t|
     t.string   "name"
@@ -29,8 +29,12 @@ ActiveRecord::Schema.define(version: 20130310223945) do
     t.integer  "city_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "lat"
+    t.float    "lng"
   end
 
   add_index "hotels", ["city_id"], name: "index_hotels_on_city_id"
+  add_index "hotels", ["lat"], name: "index_hotels_on_lat"
+  add_index "hotels", ["lng"], name: "index_hotels_on_lng"
 
 end
