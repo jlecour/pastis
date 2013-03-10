@@ -1,8 +1,5 @@
-require 'geo_point'
+require 'coordinates'
 
 class City < ActiveRecord::Base
-
-  def coordinates
-    GeoPoint.new(lat, lng)
-  end
+  include Coordinates
 end
