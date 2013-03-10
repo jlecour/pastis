@@ -1,8 +1,10 @@
+require 'geo_point'
+
 class Hotel < ActiveRecord::Base
   belongs_to :city
   
   def coordinates
-    [lat, lng]
+    GeoPoint.new(lat, lng)
   end
 
 end
